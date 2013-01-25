@@ -231,24 +231,35 @@ BugOver.MainView=Ext.extend(Ext.Viewport,{
 					              text:'库房基本信息',
 					              icon:BugOver.path+"images/dock/issues.png",
 					              handler:function(b){
-					                  content.activate(content.issue);
+					                  me.addOrShowTab('houseinfo', {
+									                title: '库房基本信息',
+									                xtype:'housepanel',
+									                closable:true
+									            }
+					              	   );
 					              },
 					              scope:me
 					           },{
 					              text:'工具分类信息',
 					              icon:BugOver.path+"images/dock/projects.png",
 					              handler:function(b){
-					                  BugOver.Msg.show('提示','该功能未实现');   
+					                 // BugOver.Msg.show('提示','该功能未实现'); 
+					                   me.addOrShowTab('toolcategories', {
+									                title: '工具分类信息',
+									                xtype:'toolcategoriespanel',
+									                closable:true
+									            }
+					              	   );
 					              },
 					              scope:me
 					           },{
 					              text:'系统权限',
 					              icon:BugOver.path+"images/dock/task.png",
 					              handler:function(b){
-					                   me.addOrShowTab('taskinfo', {
-											title : '我的任务',
+					                   me.addOrShowTab('authsys', {
+											title : '系统权限',
 											status:'B',
-											xtype : 'taskpanel',
+											xtype : 'authsyspanel',
 											closable : true,
 											listeners:{
 													  afterrender:function(p){
@@ -332,9 +343,9 @@ BugOver.MainView=Ext.extend(Ext.Viewport,{
 					              text:'库存基本信息',
 					              icon:BugOver.path+"images/dock/home.png",
 					              handler:function(b){
-					                   me.addOrShowTab('rolemanage', {
+					                   me.addOrShowTab('storeinfo', {
 									                title: '库存基本信息',
-									                xtype:'rolepanel',
+									                xtype:'storeinfopanel',
 									                closable:true
 									            }
 					              	   );  
@@ -344,12 +355,12 @@ BugOver.MainView=Ext.extend(Ext.Viewport,{
 					              text:'库房平面图',
 					              icon:BugOver.path+"images/dock/home_p.png",
 					              handler:function(b){
-					              	   me.addOrShowTab('usermanage', {
+					              	   me.addOrShowTab('storeplaninfo', {
 									                title: '库房平面图',
-									                xtype:'userpanel',
+									                xtype:'storeplaninfopanel',
 									                closable:true
 									            }
-					              	   );       
+					              	   );      
 					              },
 					              scope:me
 					           },{
@@ -391,9 +402,9 @@ BugOver.MainView=Ext.extend(Ext.Viewport,{
 					              text:'工具入库',
 					              icon:BugOver.path+"images/dock/folder_add.gif",
 					              handler:function(b){
-					                   me.addOrShowTab('rolemanage', {
-									                title: '库存基本信息',
-									                xtype:'rolepanel',
+					                    me.addOrShowTab('toolimport', {
+									                title: '工具入库',
+									                xtype:'toolimportpanel',
 									                closable:true
 									            }
 					              	   );  
@@ -403,12 +414,12 @@ BugOver.MainView=Ext.extend(Ext.Viewport,{
 					              text:'工具出库',
 					              icon:BugOver.path+"images/dock/folder_remove.png",
 					              handler:function(b){
-					              	   me.addOrShowTab('usermanage', {
+					              	   me.addOrShowTab('toolexport', {
 									                title: '工具出库',
-									                xtype:'userpanel',
+									                xtype:'toolexportpanel',
 									                closable:true
 									            }
-					              	   );       
+					              	   );    
 					              },
 					              scope:me
 					           },{
