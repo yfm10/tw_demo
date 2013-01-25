@@ -201,13 +201,14 @@ BugOver.toolexport.ToolexportPanel=Ext.extend(Ext.Panel,{
     createGrid:function(){
     // create the data store
     var store = new Ext.data.JsonStore({
-          //url: BugOver.path+'/toolexport/findAll.do',
+          //url: BugOver.path+'/storeinfo/findAll.do',
           idProperty: 'userID',
           autoDestroy:true,
           root:'root',
-          data:{root:[{authName:'张三',authSex:'男',authType:'系统管理员',authPwd:'XXX',authRight:'所有权限',authStatus:'在线'},
-          			  {authName:'李五',authSex:'女',authType:'普通管理员',authPwd:'324234',authRight:'查看',authStatus:'离线'}]},
-          fields: ['authName', 'authSex', 'authType', 'authPwd', 'authRight', 'authStatus']
+          data:{root:[{id:'1',toolName:'坚梯',quantity:1,unit:'XXX',spec:'',ic:'test',expiredate:'2013-1-25',returndate:'2014-1-1',status:'良好',houseid:'库房1',toexpiredate:'110'},
+          			  {id:'2',toolName:'2323',quantity:2,unit:'324234',spec:'111',ic:'2323'}]},
+          fields: ['id', 'toolNo', 'toolName', 'spec', 'aclevel', 
+		  'quantity','status','nextTestdate','ic','houseid','caseNo','remark']
     });
 
     // manually load local data
@@ -223,12 +224,18 @@ BugOver.toolexport.ToolexportPanel=Ext.extend(Ext.Panel,{
         border:false,
         cm: new Ext.grid.ColumnModel({
         defaults: { sortable: true, width:100,align:'center'},
-        columns:[sm,{header : '姓名',dataIndex: 'authName'},
-                    {header : '性别',dataIndex: 'authSex'},
-					{header : '人员类别',dataIndex: 'authType'},
-					{header : '口令',dataIndex: 'authPwd'},
-					{header : '权限',dataIndex: 'authRight'},
-					{header : '是否在线',dataIndex: 'authStatus'}
+        columns:[sm,{header : '编号',dataIndex: 'id'},
+                    {header : '工具编号',dataIndex: 'toolNo'},
+					{header : '工具名称',dataIndex: 'toolName'},
+					{header : '规格',dataIndex: 'spec'},
+					{header : '电压等级',dataIndex: 'aclevel'},
+					{header : '数量',dataIndex: 'quantity'},
+					{header : '目前状态',dataIndex: 'status'},
+					{header : '下次试验日期',dataIndex: 'nextTestdate'},
+					{header : '标识码',dataIndex: 'ic'},
+					{header : '库房名称',dataIndex: 'houseid'},
+					{header : '柜子编号',dataIndex: 'caseNo'},
+					{header : '备注',dataIndex: 'remark'}
         ]}),
         stripeRows: true,
         // config options for stateful behavior

@@ -1,11 +1,11 @@
-Ext.ns('BugOver.toolimport');
+Ext.ns('BugOver.tooltest');
 
  /**
-  * @namespace BugOver.toolimport
-  * @class BugOver.toolimport.ToolimportPanel
+  * @namespace BugOver.tooltest
+  * @class BugOver.tooltest.TooltestPanel
   * @extends Ext.Panel
   */
-BugOver.toolimport.ToolimportPanel=Ext.extend(Ext.Panel,{
+BugOver.tooltest.TooltestPanel=Ext.extend(Ext.Panel,{
 	 layout:'border',
 	 iconCls:'icon-tools24',
      initComponent:function(){
@@ -13,7 +13,7 @@ BugOver.toolimport.ToolimportPanel=Ext.extend(Ext.Panel,{
      	  me.initActions();
      	  me.tbar=[{xtype:'textfield'},me.actions[3],'->',me.actions[0],me.actions[1],me.actions[2]];
 
-          BugOver.toolimport.ToolimportPanel.superclass.initComponent.call(this);
+          BugOver.tooltest.TooltestPanel.superclass.initComponent.call(this);
 
           /**
            * 成员表格
@@ -68,7 +68,7 @@ BugOver.toolimport.ToolimportPanel=Ext.extend(Ext.Panel,{
            return null;
     },
     /**
-     * delete toolimport record
+     * delete tooltest record
      * @param {Record} record
      */
     delRecord : function(record) {
@@ -86,7 +86,7 @@ BugOver.toolimport.ToolimportPanel=Ext.extend(Ext.Panel,{
 			Ext.Msg.confirm('删除用户', '确定删除当前选择用户?', function(btn) {
 						if (btn == 'yes') {
 							Ext.Ajax.request({
-										url : BugOver.path + '/toolimport/delToolimports.do',
+										url : BugOver.path + '/tooltest/delTooltests.do',
 										params : {
 											userIDs : ids
 										},
@@ -112,13 +112,13 @@ BugOver.toolimport.ToolimportPanel=Ext.extend(Ext.Panel,{
 	},
     showAddWin:function(){
     	var me=this;
-    	var win = new BugOver.toolimport.ToolimportWindow({
+    	var win = new BugOver.tooltest.TooltestWindow({
     		                type:'add',
     		                title:'添加用户',
 							buttons : [{
 										text : '确定',
 										handler : function(btn) {
-											me.saveToolimport(btn, win,'add');
+											me.saveTooltest(btn, win,'add');
 										},
 										scope : this
 									}, {
@@ -133,7 +133,7 @@ BugOver.toolimport.ToolimportPanel=Ext.extend(Ext.Panel,{
 									Ext.EventManager.on(cm.getEl(), {
 										keyup : function(e) {
 											if (Ext.EventObject.ENTER == e.getKey()) {
-												me.saveToolimport(win.buttons[0], win,'add');
+												me.saveTooltest(win.buttons[0], win,'add');
 											}
 										},
 										scope : me
@@ -145,16 +145,16 @@ BugOver.toolimport.ToolimportPanel=Ext.extend(Ext.Panel,{
 
     },
     /**
-     * save toolimport to database
+     * save tooltest to database
      * @param {Button} btn
-     * @param {ToolimportWindow} win
+     * @param {TooltestWindow} win
      */
-    saveToolimport : function(btn, win,type) {
+    saveTooltest : function(btn, win,type) {
 				var form = win.form.form;
 				if (form.isValid()) {
 					btn.disable();
 					form.submit({
-								url : BugOver.path+'/toolimport/'+type+'.do',
+								url : BugOver.path+'/tooltest/'+type+'.do',
 								success : function(f, a) {
 									BugOver.Msg.show('提示', (type=='add'?'新增':'修改')+'用户成功！');
 									win.close();
@@ -176,13 +176,13 @@ BugOver.toolimport.ToolimportPanel=Ext.extend(Ext.Panel,{
         if(!record)
         	record=me.grid.selModel.getSelected();
         if(record){
-            var win = new BugOver.toolimport.ToolimportWindow({
+            var win = new BugOver.tooltest.TooltestWindow({
     		                type:'edit',
     		                title:'修改用户',
 							buttons : [{
 										text : '确定',
 										handler : function(btn) {
-											me.saveToolimport(btn, win,'update');
+											me.saveTooltest(btn, win,'update');
 										},
 										scope : this
 									}, {
@@ -245,25 +245,25 @@ BugOver.toolimport.ToolimportPanel=Ext.extend(Ext.Panel,{
      return grid;
     }
 });
-Ext.reg('toolimportpanel',BugOver.toolimport.ToolimportPanel);
+Ext.reg('tooltestpanel',BugOver.tooltest.TooltestPanel);
 
 /**
- * @namespace BugOver.toolimport
- * @class BugOver.toolimport.ToolimportWindow
+ * @namespace BugOver.tooltest
+ * @class BugOver.tooltest.TooltestWindow
  * @extends Ext.Window
- * add and edit toolimport window
+ * add and edit tooltest window
  */
-BugOver.toolimport.ToolimportWindow = Ext.extend(Ext.Window, {
+BugOver.tooltest.TooltestWindow = Ext.extend(Ext.Window, {
 			width : 400,
 			height : 300,
 			layout : 'fit',
 			type:'add',
 			buttonAlign:'center',
 			initComponent : function() {
-				BugOver.toolimport.ToolimportWindow.superclass.initComponent.call(this);
+				BugOver.tooltest.TooltestWindow.superclass.initComponent.call(this);
 				var me = this;
 				/**
-				 * toolimport form
+				 * tooltest form
 				 */
 				me.form = me.createForm();
 				me.add(me.form);
@@ -290,7 +290,7 @@ BugOver.toolimport.ToolimportWindow = Ext.extend(Ext.Window, {
 				}
 			},
 			/**
-			 * create toolimport formpanel
+			 * create tooltest formpanel
 			 *
 			 * @method
 			 */
@@ -337,17 +337,17 @@ BugOver.toolimport.ToolimportWindow = Ext.extend(Ext.Window, {
 			}
 		});
 /**
- * @namespace BugOver.toolimport
- * @class BugOver.toolimport.SelectToolimportWin
+ * @namespace BugOver.tooltest
+ * @class BugOver.tooltest.SelectTooltestWin
  * @extends Ext.Window
  */
-BugOver.toolimport.SelectToolimportWin=Ext.extend(Ext.Window,{
+BugOver.tooltest.SelectTooltestWin=Ext.extend(Ext.Window,{
    width:400,
    height:400,
    layout:'fit',
    buttonAlign:'center',
    initComponent:function(){
-       BugOver.toolimport.SelectToolimportWin.superclass.initComponent.call(this);
+       BugOver.tooltest.SelectTooltestWin.superclass.initComponent.call(this);
        this.grid = this.createGrid();
        this.add(this.grid);
        this.on('show',function(w){w.grid.store.load();});
@@ -355,7 +355,7 @@ BugOver.toolimport.SelectToolimportWin=Ext.extend(Ext.Window,{
    createGrid:function(){
 	    // create the data store
 	    var store = new Ext.data.JsonStore({
-	          url: BugOver.path+'/toolimport/findAll.do',
+	          url: BugOver.path+'/tooltest/findAll.do',
 	          idProperty: 'userID',
 	          root:'root',
 	          fields: ['userNo', 'name','userID',
@@ -388,7 +388,7 @@ BugOver.toolimport.SelectToolimportWin=Ext.extend(Ext.Window,{
    hasSelection:function(){
       return this.grid.selModel.hasSelection();
    },
-   getSelectedToolimportIDs:function(){
+   getSelectedTooltestIDs:function(){
           var records=this.grid.selModel.getSelections(),
               length=records.length,
               ids=[];

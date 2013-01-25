@@ -426,9 +426,9 @@ BugOver.MainView=Ext.extend(Ext.Viewport,{
 					              text:'工具试验',
 					              icon:BugOver.path+"images/dock/folder_verified.png",
 					              handler:function(b){
-					              	   me.addOrShowTab('usermanage', {
+					              	   me.addOrShowTab('tooltest', {
 									                title: '工具试验管理',
-									                xtype:'userpanel',
+									                xtype:'tooltestpanel',
 									                closable:true
 									            }
 					              	   );       

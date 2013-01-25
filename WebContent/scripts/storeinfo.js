@@ -205,7 +205,7 @@ BugOver.storeinfo.StoreinfoPanel=Ext.extend(Ext.Panel,{
           idProperty: 'userID',
           autoDestroy:true,
           root:'root',
-          data:{root:[{id:'1',toolName:'坚梯',quantity:1,unit:'XXX',spec:'',ic:'在线',expiredate:'2013-1-25',returndate:'2014-1-1',status:'良好',houseid:'库房1',toexpiredate:'110'},
+          data:{root:[{id:'1',toolName:'坚梯',quantity:1,unit:'XXX',spec:'',ic:'test',expiredate:'2013-1-25',returndate:'2014-1-1',status:'良好',houseid:'库房1',toexpiredate:'110'},
           			  {id:'2',toolName:'2323',quantity:2,unit:'324234',spec:'111',ic:'2323'}]},
           fields: ['id', 'toolName', 'quantity', 'unit', 'spec', 'ic','expiredate','returndate','status','houseid','toexpiredate']
     });
