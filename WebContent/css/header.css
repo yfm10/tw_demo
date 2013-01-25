@@ -1,0 +1,53 @@
+@CHARSET "UTF-8";
+
+#header {
+	height:55px;
+    background: #7F99BE url(../images/layout-browser-hd-bg.jpg) repeat-x center;
+}
+#header h1 {
+	display:block;
+	width:424px;
+	float:left;
+    font-size: 29px;
+    color: #000;
+    font-weight: bold;
+    padding: 10px 10px;
+    padding-left: 30px;
+}
+/*
+line-height:44px; height:44px;*/
+.header_r{float:right;width:415px;_width:465px; margin-top:2px;}
+.header_r p{float:right;display:block; margin:auto 8px;font-size:18px; padding: 5px 10px;color: #fff;}
+
+.msg .x-box-mc {
+    font-size:14px;
+    min-height:48;
+}
+#msg-div {
+    position:absolute;
+    left:35%;
+    top:10px;
+    width:280px;
+    z-index:20000;
+}
+
+.msg-image{
+  background-position: 10px center;
+  background-repeat:  no-repeat;
+  float:left;
+  padding-top: 5px;
+  padding-right: 5px;
+  width:50px;
+  min-width:50px;
+  min-height:40px;
+}
+
+.msg-error{ background-image: url(../images/msg/error.gif) !important;}
+.msg-happy{ background-image: url(../images/msg/happy.png);}
+.msg-loading{ background-image: url(../images/msg/loading.gif);}
+.msg-sad{ background-image: url(../images/msg/sad.png);}
+.msg-security { background-image: url(../images/msg/security.png);}
+.msg-smile{ background-image: url(../images/msg/smile.png);}
+.msg-success{ background-image: url(../images/msg/success.png);}
+.msg-warning{ background-image: url(../images/msg/warning.gif);}
+.msg-info{ background-image: url(../images/msg/icon-info.gif);}

@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>工具信息管理系统</title>	
+	<link rel="stylesheet" href="extjs/resources/css/ext-all.css" />
+	<link rel="stylesheet" href="css/global.css" />
+	<script charset="utf-8" src="extjs/ext-base.js"></script>
+	<script charset="utf-8" src="extjs/ext-all.js"></script>
+	<script charset="utf-8" src="extjs/ext-lang-zh_CN.js"></script>
+	<script charset="utf-8" src="extjs/ux/RowExpander.js"></script>
+</head>
+<body>
+<!-- Fields required for history management -->
+<form id="history-form" class="x-hidden">
+    <input type="hidden" id="x-history-field" />
+    <iframe id="x-history-frame"></iframe>
+</form>
+<!-- 
+<%
+String agent = request.getHeader("User-Agent");
+if(agent.indexOf("MSIE 6") >= 0){
+out.print("<style type='text/css'> img{ behavior:  url("+resourcePath+"/iepngfix/iepngfix.htc) }</style>");
+out.print("<script type='text/javascript' src='"+resourcePath+"/iepngfix/iepngfix_tilebg.js'></script>");
+}
+%> -->
+<script>
+Ext.ns('BugOver');
+BugOver.path='';
+BugOver.curUserID='100001';
+BugOver.curUserName='张三丰';
+BugOver.curUserNo='100001';
+Ext.BLANK_IMAGE_URL ='images/s.gif';
+</script>
+
+<script charset="utf-8" src="scripts/login.js"></script>
+<script charset="utf-8" src="scripts/util.js"></script>
+<script charset="utf-8" src="scripts/roles.js"></script>
+<script charset="utf-8" src="scripts/user.js"></script>
+<script charset="utf-8" src="scripts/person.js"></script>
+<script charset="utf-8" src="scripts/task.js"></script>
+<script charset="utf-8" src="scripts/project.js"></script>
+<script charset="utf-8" src="scripts/warning.js"></script>
+<script charset="utf-8" src="scripts/notice.js"></script>
+<script charset="utf-8" src="scripts/video.js"></script>
+<script charset="utf-8" src="scripts/DockItemList.js"></script>
+<script charset="utf-8" src="scripts/MainView.js"></script>
+
+<script charset="utf-8" src="scripts/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+.icon-accept{background-image: url(../images/icons/accept.png) !important;}
+.icon-add{background-image: url(../images/icons/add.png) !important;}
+.icon-edit{background-image: url(../images/icons/edit.gif) !important;}
+.icon-del{background-image: url(../images/icons/del.gif) !important;}
+.icon-error{background-image: url(../images/icons/error.gif) !important;}
+.icon-delete{background-image: url(../images/icons/delete.gif) !important;}
+.icon-cross{background-image: url(../images/icons/cross.gif) !important;}
+.icon-group{background-image: url(../images/icons/group.png)}
+.icon-issue{background-image: url(../images/icons/issue.png)}
+.icon-search{background-image: url(../images/icons/search.gif)}
+.icon-searchmore{background-image: url(../images/icons/searchmore.gif)}
+.icon-commit{background-image: url(../images/icons/commit.png)}
+.icon-tree_diagramm{background-image: url(../images/icons/tree_diagramm.png)}
+.icon-view_detail{background-image: url(../images/icons/view_detail.png)}
+.icon-man_brown{background-image: url(../images/icons/man_brown.png)}
+.icon-url_history{background-image: url(../images/icons/url_history.png)}
+.icon-ok{background-image: url(../images/icons/ok.png)}
+.icon-mail_receive{background-image: url(../images/icons/mail_receive.png) !important;}
+.icon-reject{background-image: url(../images/icons/reject.png) !important;}
+.icon-navigation{background-image: url(../images/icons/navigation_16.png) !important;}
+.icon-start{background-image: url(../images/icons/start.png) !important;}
+.icon-contract{ackground-image: url(../images/icons/application_side_contract.png) !important;}
+.icon-expand{background-image: url(../images/icons/application_side_expand.png) !important;}
+.icon-clear-group{background-image: url(../images/icons/user_group_16.png) !important;}
+.icon-message{background-image: url(../images/icons/message.png) !important;}
+.icon-messages{background-image: url(../images/icons/messages.png) !important;}
+.icon-message_edit{background-image: url(../images/icons/message_edit.png) !important;}
+.icon-camera{background-image: url(../images/icons/video_camera.png) !important;}
+.icon-grid{background-image: url(../images/icons/grid.png) !important;}
+.icon-form{background-image: url(../images/icons/application_form_edit.png) !important;}
+
+.icon-people24{background-image: url(../images/icons/people.png) !important;}
+.icon-warning24{background-image: url(../images/icons/warning24.png) !important;}
+.icon-warning{background-image: url(../images/icons/warning.png) !important;}
+.icon-system24{background-image: url(../images/icons/system24.png) !important;}
+.icon-compass24{background-image: url(../images/icons/compass24.png) !important;}
+.icon-home24{background-image: url(../images/icons/home.gif) !important;}
+.icon-tools24{background-image: url(../images/icons/tools.gif) !important;}
+.icon-stats24{background-image: url(../images/icons/stats.gif) !important;}
+ /* style for the "buy" ActionColumn icon */
+ .x-action-col-cell img.accept {
+     height: 16px;
+     width: 16px;
+     background-image: url(../images/icons/accept.png);
+ }
+
+ /* style for the "alert" ActionColumn icon */
+ .x-action-col-cell img.delete {
+     height: 16px;
+     width: 16px;
+     margin:0px 5px;
+     background-image: url(../images/icons/delete.gif);
+ }
+ .x-action-col-cell img.edit{
+     height: 16px;
+     width: 16px;
+     margin:0px 3px;
+     background-image: url(../images/icons/edit.gif);
+ }
+  .x-action-col-cell img.search{
+     height: 16px;
+     width: 16px;
+     margin:0px 3px;
+     background-image: url(../images/icons/search.gif);
+ }
+   .x-action-col-cell img.history{
+     height: 16px;
+     width: 16px;
+     margin:0px 3px;
+     background-image: url(../images/icons/url_history.png);
+ }

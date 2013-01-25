@@ -1,0 +1,96 @@
+@CHARSET "UTF-8";
+@import url(icon.css);
+@import url(header.css);
+@import url(DockItemList.css);
+body,td,th {
+	font-family:'微软雅黑,Geneva, Arial, Helvetica, sans-serif,lucida grande, tahoma, arial, sans-serif';
+	font-size: 12px;
+}
+.x-panel-inline-icon{
+	height: 24px;
+	width: 24px;
+}
+.x-panel-header{
+	 font-size: 14px;
+}
+
+/* style rows on mouseover */
+ .x-grid3-row-over .x-grid3-cell-inner {
+    font-weight: bold;
+}
+
+.issue-detial {
+	font-family: 微软雅黑,Verdana,sans-serif,宋体;
+    padding: 10px 10px 10px 10px;
+    border: 1px bold green;
+    color: #03386C;
+}
+
+.issue-detial-table {
+	border-collapse:collapse;
+    border-color:#0C0;
+	margin: 5px 5px 5px 5px;
+	font-size: 13px;
+	table-layout: fixed;
+}
+
+.issue-detial-table th {
+	border:thin;
+	font-weight: bold;
+	align:center;
+}
+
+.issue-detial-table th,.issue-detial-table td {
+	background-color: white;
+	align:center;
+	line-height: 25px;
+	border: 1px solid #0C0;
+	padding: 2px 3px 2px 3px;
+}
+
+.noticedetial {
+	font-family: 微软雅黑,Verdana,sans-serif,宋体;
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #C1D9F4;
+    margin-bottom: 20px;
+    padding: 0 10px;
+}
+.noticedetial  h1 {
+    font-size: 18pt;
+    margin: 30px 0 20px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+.noticedetial .pubDate {
+	border-bottom: 1px solid #DDDDDD;
+    color: #666666;
+    font-size: 10.5pt;
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+}
+.noticedetial .content {
+    color: #000000;
+    font-size: 12pt;
+    line-height: 24px;
+    overflow: hidden;
+}
+.issuedetial{
+	font-family: 微软雅黑,Verdana,sans-serif,宋体;
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #C1D9F4;
+    margin-bottom: 20px;
+    padding: 0 10px;
+}
+.issuedetial .taskDate {
+	border-bottom: 1px solid #DDDDDD;
+    color: #666666;
+    font-size: 12px;
+    margin-top: 20px;
+    padding-bottom: 5px;
+}
+
+.issuedetial .summary {
+	border-bottom: 1px solid #DDDDDD;
+    padding-bottom: 5px;
+}
+
