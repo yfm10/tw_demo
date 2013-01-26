@@ -7,7 +7,7 @@ Ext.ns('BugOver.toolimport');
   */
 BugOver.toolimport.ToolimportPanel=Ext.extend(Ext.Panel,{
 	 layout:'border',
-	 iconCls:'icon-tools24',
+	 iconCls:'icon-add16',
      initComponent:function(){
      	  var me=this;
      	  me.initActions();

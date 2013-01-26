@@ -1,5 +1,6 @@
 .icon-accept{background-image: url(../images/icons/accept.png) !important;}
 .icon-add{background-image: url(../images/icons/add.png) !important;}
+.icon-add16{background-image: url(../images/icons/add16.gif) !important;}
 .icon-edit{background-image: url(../images/icons/edit.gif) !important;}
 .icon-del{background-image: url(../images/icons/del.gif) !important;}
 .icon-error{background-image: url(../images/icons/error.gif) !important;}
@@ -34,6 +35,15 @@
 .icon-warning{background-image: url(../images/icons/warning.png) !important;}
 .icon-system24{background-image: url(../images/icons/system24.png) !important;}
 .icon-compass24{background-image: url(../images/icons/compass24.png) !important;}
+.icon-home16{background-image: url(../images/icons/home16.gif) !important;}
+.icon-toolbox16{background-image: url(../images/icons/toolbox16.gif) !important;}
+.icon-toolcat16{background-image: url(../images/icons/toolcat16.gif) !important;}
+.icon-gear16{background-image: url(../images/icons/gear16.gif) !important;}
+.icon-arrow-right16{background-image: url(../images/icons/arrow-right.gif) !important;}
+.icon-arrow-up16{background-image: url(../images/icons/up.gif) !important;}
+.icon-arrow-down16{background-image: url(../images/icons/down.gif) !important;}
+.icon-tick16{background-image: url(../images/icons/tick16.gif) !important;}
+.icon-minus16{background-image: url(../images/icons/minus16.gif) !important;}
 .icon-home24{background-image: url(../images/icons/home.gif) !important;}
 .icon-tools24{background-image: url(../images/icons/tools.gif) !important;}
 .icon-stats24{background-image: url(../images/icons/stats.gif) !important;}

@@ -7,7 +7,7 @@ Ext.ns('BugOver.house');
   */
 BugOver.house.HousePanel=Ext.extend(Ext.Panel,{
 	 layout:'border',
-	 iconCls:'icon-group',
+	 iconCls:'icon-home16',
      initComponent:function(){
      	  var me=this;
      	  me.initActions();

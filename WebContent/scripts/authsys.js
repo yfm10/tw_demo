@@ -7,7 +7,7 @@ Ext.ns('BugOver.authsys');
   */
 BugOver.authsys.AuthSysPanel=Ext.extend(Ext.Panel,{
 	 layout:'border',
-	 iconCls:'icon-tools24',
+	 iconCls:'icon-gear16',
      initComponent:function(){
      	  var me=this;
      	  me.initActions();

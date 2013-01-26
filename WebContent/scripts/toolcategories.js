@@ -7,7 +7,7 @@ Ext.ns('BugOver.toolcategories');
   */
 BugOver.toolcategories.ToolcategoriesPanel=Ext.extend(Ext.Panel,{
 	 layout:'border',
-	 iconCls:'icon-tools24',
+	 iconCls:'icon-toolcat16',
      initComponent:function(){
      	  var me=this;
      	  me.initActions();

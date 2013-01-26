@@ -7,7 +7,7 @@ Ext.ns('BugOver.tooltest');
   */
 BugOver.tooltest.TooltestPanel=Ext.extend(Ext.Panel,{
 	 layout:'border',
-	 iconCls:'icon-tools24',
+	 iconCls:'icon-tick16',
      initComponent:function(){
      	  var me=this;
      	  me.initActions();

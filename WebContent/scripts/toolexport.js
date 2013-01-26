@@ -7,7 +7,7 @@ Ext.ns('BugOver.toolexport');
   */
 BugOver.toolexport.ToolexportPanel=Ext.extend(Ext.Panel,{
 	 layout:'border',
-	 iconCls:'icon-tools24',
+	 iconCls:'icon-minus16',
      initComponent:function(){
      	  var me=this;
      	  me.initActions();
